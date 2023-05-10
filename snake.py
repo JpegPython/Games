@@ -39,16 +39,16 @@ while True:
     clock.tick(20)
 
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()
-        if event.type==KEYDOWN:
-            if event.key==K_UP:
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_UP:
                 my_direction = UP
-            if event.key==K_DOWN:
+            if event.key==pygame.K_DOWN:
                 my_direction = DOWN
-            if event.key==K_LEFT:
+            if event.key==pygame.K_LEFT:
                 my_direction = LEFT
-            if event.key==K_RIGHT:
+            if event.key==pygame.K_RIGHT:
                 my_direction = RIGHT
 
     if snake_collision(snake):
